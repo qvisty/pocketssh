@@ -28,3 +28,4 @@ p, li { color: var(--text); }
 a { color: var(--accent); }
 code { font-family: ui-monospace, monospace; font-size: 0.9em; }
 footer { margin-top: 48px; color: var(--muted); font-size: 0.9rem; }
+nav a.lang { margin-left: auto; border: 1px solid var(--border); border-radius: 999px; padding: 0 10px; }

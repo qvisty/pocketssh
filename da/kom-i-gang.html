@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kom i gang med Pocket SSH Terminal</title>
+<link rel="stylesheet" href="../style.css">
+<link rel="alternate" hreflang="en" href="../getting-started.html">
+</head>
+<body>
+<main>
+<header><div class="mark">&gt;_</div><a href="index.html">Pocket SSH Terminal</a></header>
+<nav><a href="index.html">Forside</a><a href="kom-i-gang.html" aria-current="page">Kom i gang</a><a href="support.html">Support</a><a href="privatlivspolitik.html">Privatlivspolitik</a><a class="lang" href="../getting-started.html" hreflang="en" lang="en">English</a></nav>
+
+
+<h1>Kom i gang</h1>
+<p class="lead">Det tager omkring ti minutter første gang. Den fulde vejledning findes også inde i appen under Indstillinger, Opsætningsguide.</p>
+
+<h2>1. Tailscale, anbefalet</h2>
+<p>Installér Tailscale på serveren og på telefonen, og log ind med samme konto. Så får serveren en privat adresse, som kun dine egne enheder kan nå. Kan din server allerede nås med SSH, kan du springe dette trin over og bruge dens almindelige adresse.</p>
+
+<h2>2. Lav en nøgle i appen</h2>
+<p>Gå til Nøgler og lav en ny Ed25519 nøgle. Appen viser den offentlige del som en færdig linje til <code>authorized_keys</code>. Den private del forlader aldrig telefonen.</p>
+
+<h2>3. Læg nøglen på serveren</h2>
+<p>Tilføj linjen til <code>~/.ssh/authorized_keys</code> for din bruger på serveren.</p>
+
+<h2>4. Opret serveren i appen</h2>
+<p>Skriv serverens adresse, dit brugernavn og vælg nøglen. Tryk Test for at se, at serveren kan nås.</p>
+
+<h2>5. Kontrollér serverens fingeraftryk</h2>
+<p>Første gang viser appen serverens fingeraftryk. Sammenlign det med det, serveren selv viser, før du godkender:</p>
+<div class="card"><code>ssh-keygen -lf /etc/ssh/ssh_host_ed25519_key.pub</code></div>
+<p>Passer det, er du forbundet.</p>
+
+
+<footer>Pocket SSH Terminal. Kontakt: <a href="mailto:pocketssh.feedback@proton.me">pocketssh.feedback@proton.me</a></footer>
+</main>
+</body>
+</html>

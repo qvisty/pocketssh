@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Getting started with Pocket SSH Terminal</title>
+<link rel="stylesheet" href="style.css">
+<link rel="alternate" hreflang="da" href="da/kom-i-gang.html">
+</head>
+<body>
+<main>
+<header><div class="mark">&gt;_</div><a href="index.html">Pocket SSH Terminal</a></header>
+<nav><a href="index.html">Home</a><a href="getting-started.html" aria-current="page">Getting started</a><a href="support.html">Support</a><a href="privacy.html">Privacy policy</a><a class="lang" href="da/kom-i-gang.html" hreflang="da" lang="da">Dansk</a></nav>
+
+<h1>Getting started</h1>
+<p class="lead">It takes about ten minutes the first time. The full guide is also inside the app under Settings, Setup guide.</p>
+
+<h2>1. Tailscale, recommended</h2>
+<p>Install Tailscale on the server and on the phone, and sign in with the same account. The server then gets a private address that only your own devices can reach. If your server can already be reached over SSH, you can skip this step and use its normal address.</p>
+
+<h2>2. Create a key in the app</h2>
+<p>Go to Keys and create a new Ed25519 key. The app shows the public part as a ready made line for <code>authorized_keys</code>. The private part never leaves the phone.</p>
+
+<h2>3. Put the key on the server</h2>
+<p>Add the line to <code>~/.ssh/authorized_keys</code> for your user on the server.</p>
+
+<h2>4. Add the server in the app</h2>
+<p>Enter the server's address and your user name, and pick the key. Tap Test to see that the server can be reached.</p>
+
+<h2>5. Check the server's fingerprint</h2>
+<p>The first time, the app shows the server's fingerprint. Compare it with what the server itself shows before you accept:</p>
+<div class="card"><code>ssh-keygen -lf /etc/ssh/ssh_host_ed25519_key.pub</code></div>
+<p>If it matches, you are connected.</p>
+
+<footer>Pocket SSH Terminal. Contact: <a href="mailto:pocketssh.feedback@proton.me">pocketssh.feedback@proton.me</a></footer>
+</main>
+</body>
+</html>
