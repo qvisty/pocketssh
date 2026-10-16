@@ -13,10 +13,10 @@
 <nav><a href="index.html">Home</a><a href="getting-started.html" aria-current="page">Getting started</a><a href="support.html">Support</a><a href="privacy.html">Privacy policy</a><a class="lang" href="da/kom-i-gang.html" hreflang="da" lang="da">Dansk</a></nav>
 
 <h1>Getting started</h1>
-<p class="lead">It takes about ten minutes the first time. The full guide is also inside the app under Settings, Setup guide.</p>
+<p class="lead">All you need is a Linux server you can reach with SSH. It takes about ten minutes the first time. The full guide is also inside the app under Settings, Setup guide.</p>
 
-<h2>1. Tailscale, recommended</h2>
-<p>Install Tailscale on the server and on the phone, and sign in with the same account. The server then gets a private address that only your own devices can reach. If your server can already be reached over SSH, you can skip this step and use its normal address.</p>
+<h2>1. Make sure the server can be reached</h2>
+<p>Use the server's IP address or hostname, as you would from a computer. Want to keep SSH closed to the internet? Install Tailscale on the server and the phone, sign in with the same account, and use the server's Tailscale address instead. That step is optional.</p>
 
 <h2>2. Create a key in the app</h2>
 <p>Go to Keys and create a new Ed25519 key. The app shows the public part as a ready made line for <code>authorized_keys</code>. The private part never leaves the phone.</p>

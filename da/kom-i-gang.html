@@ -14,10 +14,10 @@
 
 
 <h1>Kom i gang</h1>
-<p class="lead">Det tager omkring ti minutter første gang. Den fulde vejledning findes også inde i appen under Indstillinger, Opsætningsguide.</p>
+<p class="lead">Du skal blot have en Linux server, du kan nå med SSH. Det tager omkring ti minutter første gang. Den fulde vejledning findes også inde i appen under Indstillinger, Opsætningsguide.</p>
 
-<h2>1. Tailscale, anbefalet</h2>
-<p>Installér Tailscale på serveren og på telefonen, og log ind med samme konto. Så får serveren en privat adresse, som kun dine egne enheder kan nå. Kan din server allerede nås med SSH, kan du springe dette trin over og bruge dens almindelige adresse.</p>
+<h2>1. Sørg for, at serveren kan nås</h2>
+<p>Brug serverens IP adresse eller hostname, som du ville gøre fra en computer. Vil du holde SSH lukket mod internettet, så installér Tailscale på serveren og telefonen, log ind med samme konto, og brug serverens Tailscale adresse i stedet. Det trin er valgfrit.</p>
 
 <h2>2. Lav en nøgle i appen</h2>
 <p>Gå til Nøgler og lav en ny Ed25519 nøgle. Appen viser den offentlige del som en færdig linje til <code>authorized_keys</code>. Den private del forlader aldrig telefonen.</p>

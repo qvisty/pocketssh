@@ -29,3 +29,7 @@ a { color: var(--accent); }
 code { font-family: ui-monospace, monospace; font-size: 0.9em; }
 footer { margin-top: 48px; color: var(--muted); font-size: 0.9rem; }
 nav a.lang { margin-left: auto; border: 1px solid var(--border); border-radius: 999px; padding: 0 10px; }
+.points { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
+.point { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 14px 16px; min-width: 0; }
+.point h3 { margin: 0 0 6px; font-size: 1.02rem; }
+.point p { margin: 0; color: var(--muted); }
