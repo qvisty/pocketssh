@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Primeros pasos con Pocket SSH Terminal</title>
+<link rel="stylesheet" href="../style.css">
+<link rel="alternate" hreflang="en" href="../getting-started.html"><link rel="alternate" hreflang="da" href="../da/kom-i-gang.html"><link rel="alternate" hreflang="de" href="../de/erste-schritte.html"><link rel="alternate" hreflang="fr" href="../fr/premiers-pas.html">
+</head>
+<body>
+<main>
+<header><div class="mark">&gt;_</div><a href="index.html">Pocket SSH Terminal</a><span class="langs"><a href="../getting-started.html" hreflang="en" lang="en">English</a><a href="../da/kom-i-gang.html" hreflang="da" lang="da">Dansk</a><a href="../de/erste-schritte.html" hreflang="de" lang="de">Deutsch</a><a href="../fr/premiers-pas.html" hreflang="fr" lang="fr">Français</a></span></header>
+<nav><a href="index.html">Inicio</a><a href="primeros-pasos.html" aria-current="page">Primeros pasos</a><a href="soporte.html">Soporte</a><a href="privacidad.html">Privacidad</a></nav>
+
+<h1>Primeros pasos</h1>
+<p class="lead">Solo necesitas un servidor Linux al que puedas llegar por SSH. La primera vez lleva unos diez minutos. La guía completa también está dentro de la app, en Settings, Setup guide. La app en sí está en inglés, así que aquí usamos los nombres en inglés de los menús y botones.</p>
+
+<h2>1. Asegúrate de que el servidor sea accesible</h2>
+<p>Usa la dirección IP o el nombre de host del servidor, igual que desde un ordenador. ¿Prefieres que SSH no esté abierto a internet? Instala Tailscale en el servidor y en el teléfono, inicia sesión con la misma cuenta y usa la dirección de Tailscale del servidor. Este paso es opcional.</p>
+
+<h2>2. Crea una clave en la app</h2>
+<p>Ve a Keys y crea una clave Ed25519 nueva. La app muestra la parte pública como una línea lista para <code>authorized_keys</code>. La parte privada nunca sale del teléfono. ¿Prefieres entrar con contraseña? También se puede. En el perfil del servidor, elige Password en Login.</p>
+
+<h2>3. Pon la clave en el servidor</h2>
+<p>Añade la línea a <code>~/.ssh/authorized_keys</code> de tu usuario en el servidor.</p>
+
+<h2>4. Añade el servidor en la app</h2>
+<p>Escribe la dirección del servidor y tu nombre de usuario, y elige la clave. Toca Test para comprobar que el servidor es accesible.</p>
+
+<h2>5. Comprueba la huella del servidor</h2>
+<p>La primera vez, la app muestra la huella del servidor. Compárala con la que muestra el propio servidor antes de aceptarla:</p>
+<div class="card"><code>ssh-keygen -lf /etc/ssh/ssh_host_ed25519_key.pub</code></div>
+<p>Si coincide, ya estás conectado.</p>
+
+<footer>Pocket SSH Terminal. Contacto: <a href="mailto:pocketssh.feedback@proton.me">pocketssh.feedback@proton.me</a></footer>
+</main>
+</body>
+</html>

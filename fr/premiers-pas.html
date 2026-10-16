@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Premiers pas avec Pocket SSH Terminal</title>
+<link rel="stylesheet" href="../style.css">
+<link rel="alternate" hreflang="en" href="../getting-started.html"><link rel="alternate" hreflang="da" href="../da/kom-i-gang.html"><link rel="alternate" hreflang="de" href="../de/erste-schritte.html"><link rel="alternate" hreflang="es" href="../es/primeros-pasos.html">
+</head>
+<body>
+<main>
+<header><div class="mark">&gt;_</div><a href="index.html">Pocket SSH Terminal</a><span class="langs"><a href="../getting-started.html" hreflang="en" lang="en">English</a><a href="../da/kom-i-gang.html" hreflang="da" lang="da">Dansk</a><a href="../de/erste-schritte.html" hreflang="de" lang="de">Deutsch</a><a href="../es/primeros-pasos.html" hreflang="es" lang="es">Español</a></span></header>
+<nav><a href="index.html">Accueil</a><a href="premiers-pas.html" aria-current="page">Premiers pas</a><a href="support.html">Assistance</a><a href="confidentialite.html">Confidentialité</a></nav>
+
+<h1>Premiers pas</h1>
+<p class="lead">Il vous faut seulement un serveur Linux joignable en SSH. Comptez environ dix minutes la première fois. Le guide complet se trouve aussi dans l'application, sous Settings > Setup guide. L'application est en anglais, c'est pourquoi les menus sont cités ici sous leur nom anglais.</p>
+
+<h2>1. Vérifier que le serveur est joignable</h2>
+<p>Utilisez l'adresse IP ou le nom d'hôte du serveur, comme depuis un ordinateur. Vous préférez ne pas exposer SSH sur Internet ? Installez Tailscale sur le serveur et sur le téléphone, ouvrez une session avec le même compte et utilisez plutôt l'adresse Tailscale du serveur. Cette étape est facultative.</p>
+
+<h2>2. Créer une clé dans l'application</h2>
+<p>Allez dans Keys et créez une nouvelle clé Ed25519. L'application affiche la partie publique sous forme de ligne prête à coller dans <code>authorized_keys</code>. La partie privée ne quitte jamais le téléphone. Vous préférez un mot de passe ? C'est possible aussi : dans le profil du serveur, choisissez Password sous Login.</p>
+
+<h2>3. Placer la clé sur le serveur</h2>
+<p>Ajoutez la ligne au fichier <code>~/.ssh/authorized_keys</code> de votre utilisateur sur le serveur.</p>
+
+<h2>4. Ajouter le serveur dans l'application</h2>
+<p>Saisissez l'adresse du serveur et votre nom d'utilisateur, puis choisissez la clé. Appuyez sur Test pour vérifier que le serveur est joignable.</p>
+
+<h2>5. Vérifier l'empreinte du serveur</h2>
+<p>La première fois, l'application affiche l'empreinte du serveur. Avant de l'accepter, comparez cette empreinte avec celle qu'affiche le serveur :</p>
+<div class="card"><code>ssh-keygen -lf /etc/ssh/ssh_host_ed25519_key.pub</code></div>
+<p>Si elles correspondent, vous êtes connecté.</p>
+
+<footer>Pocket SSH Terminal. Contact: <a href="mailto:pocketssh.feedback@proton.me">pocketssh.feedback@proton.me</a></footer>
+</main>
+</body>
+</html>

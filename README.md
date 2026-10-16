@@ -4,16 +4,16 @@ Hjemmesiden for Pocket SSH Terminal, en SSH terminal til Android. Siden vises me
 
 Repoet er offentligt og indeholder kun tekster til siden. Appens kode ligger et andet sted.
 
-Engelsk ligger i roden, dansk i `da/` og tysk i `de/`. Hver side linker til samme side på de andre sprog.
+Engelsk ligger i roden. Dansk, tysk, fransk og spansk ligger i `da/`, `de/`, `fr/` og `es/`. Hver side linker øverst til samme side på de andre sprog.
 
-| Engelsk | Dansk | Tysk | Indhold |
-|---|---|---|---|
-| `index.html` | `da/index.html` | `de/index.html` | Forside |
-| `getting-started.html` | `da/kom-i-gang.html` | `de/erste-schritte.html` | Kom i gang i fem trin |
-| `support.html` | `da/support.html` | `de/support.html` | Support og kontakt |
-| `privacy.html` | `da/privatlivspolitik.html` | `de/datenschutz.html` | Privatlivspolitikken, som Google Play linker til |
+| Engelsk | Dansk | Tysk | Fransk | Spansk | Indhold |
+|---|---|---|---|---|---|
+| `index.html` | `da/index.html` | `de/index.html` | `fr/index.html` | `es/index.html` | Forside |
+| `getting-started.html` | `da/kom-i-gang.html` | `de/erste-schritte.html` | `fr/premiers-pas.html` | `es/primeros-pasos.html` | Kom i gang |
+| `support.html` | `da/support.html` | `de/support.html` | `fr/support.html` | `es/soporte.html` | Support |
+| `privacy.html` | `da/privatlivspolitik.html` | `de/datenschutz.html` | `fr/confidentialite.html` | `es/privacidad.html` | Privatlivspolitik |
 
-Selve appen findes kun på engelsk og dansk. De tyske sider bruger derfor appens engelske navne på menuer og knapper.
+Selve appen findes kun på engelsk og dansk. Den tyske, franske og spanske udgave bruger derfor appens engelske navne på menuer og knapper.
 
 `style.css` er fælles for alle sprog. `privatlivspolitik.html` og `kom-i-gang.html` i roden sender videre til de danske sider, så gamle links virker.
 
