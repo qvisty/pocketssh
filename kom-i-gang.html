@@ -14,8 +14,8 @@
 <h1>Kom i gang</h1>
 <p class="lead">Det tager omkring ti minutter første gang. Den fulde vejledning findes også inde i appen under Indstillinger, Opsætningsguide.</p>
 
-<h2>1. Tailscale</h2>
-<p>Installér Tailscale på serveren og på telefonen, og log ind med samme konto. Så får serveren en privat adresse, som kun dine egne enheder kan nå.</p>
+<h2>1. Tailscale, anbefalet</h2>
+<p>Installér Tailscale på serveren og på telefonen, og log ind med samme konto. Så får serveren en privat adresse, som kun dine egne enheder kan nå. Kan din server allerede nås med SSH, kan du springe dette trin over og bruge dens almindelige adresse.</p>
 
 <h2>2. Lav en nøgle i appen</h2>
 <p>Gå til Nøgler og lav en ny Ed25519 nøgle. Appen viser den offentlige del som en færdig linje til <code>authorized_keys</code>. Den private del forlader aldrig telefonen.</p>
@@ -24,7 +24,7 @@
 <p>Tilføj linjen til <code>~/.ssh/authorized_keys</code> for din bruger på serveren.</p>
 
 <h2>4. Opret serveren i appen</h2>
-<p>Skriv serverens Tailscale adresse, dit brugernavn og vælg nøglen. Tryk Test for at se, at serveren kan nås.</p>
+<p>Skriv serverens adresse, dit brugernavn og vælg nøglen. Tryk Test for at se, at serveren kan nås.</p>
 
 <h2>5. Kontrollér serverens fingeraftryk</h2>
 <p>Første gang viser appen serverens fingeraftryk. Sammenlign det med det, serveren selv viser, før du godkender:</p>
