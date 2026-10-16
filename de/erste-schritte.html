@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Erste Schritte mit Pocket SSH Terminal</title>
+<link rel="stylesheet" href="../style.css">
+<link rel="alternate" hreflang="en" href="../getting-started.html"><link rel="alternate" hreflang="da" href="../da/kom-i-gang.html">
+</head>
+<body>
+<main>
+<header><div class="mark">&gt;_</div><a href="index.html">Pocket SSH Terminal</a><span class="langs"><a href="../getting-started.html" hreflang="en" lang="en">English</a><a href="../da/kom-i-gang.html" hreflang="da" lang="da">Dansk</a></span></header>
+<nav><a href="index.html">Startseite</a><a href="erste-schritte.html" aria-current="page">Erste Schritte</a><a href="support.html">Support</a><a href="datenschutz.html">Datenschutz</a></nav>
+
+<h1>Erste Schritte</h1>
+<p class="lead">Du brauchst nur einen Linux Server, den du per SSH erreichst. Beim ersten Mal dauert es etwa zehn Minuten. Die vollständige Anleitung findest du auch in der App unter Settings, Setup guide. Die App selbst ist auf Englisch.</p>
+
+<h2>1. Sicherstellen, dass der Server erreichbar ist</h2>
+<p>Verwende die IP Adresse oder den Hostnamen des Servers, genau wie vom Computer aus. Soll SSH nicht offen im Internet stehen? Installiere Tailscale auf Server und Telefon, melde dich mit demselben Konto an und verwende stattdessen die Tailscale Adresse des Servers. Dieser Schritt ist optional.</p>
+
+<h2>2. Einen Schlüssel in der App erzeugen</h2>
+<p>Geh zu Keys und erzeuge einen neuen Ed25519 Schlüssel. Die App zeigt den öffentlichen Teil als fertige Zeile für <code>authorized_keys</code>. Der private Teil verlässt nie das Telefon. Lieber mit Passwort anmelden? Das geht auch, wähle dann im Serverprofil unter Login die Option Password.</p>
+
+<h2>3. Den Schlüssel auf den Server legen</h2>
+<p>Füge die Zeile für deinen Benutzer auf dem Server in <code>~/.ssh/authorized_keys</code> ein.</p>
+
+<h2>4. Den Server in der App anlegen</h2>
+<p>Gib die Adresse des Servers und deinen Benutzernamen ein und wähle den Schlüssel. Tippe auf Test, um zu sehen, ob der Server erreichbar ist.</p>
+
+<h2>5. Den Fingerabdruck des Servers prüfen</h2>
+<p>Beim ersten Mal zeigt die App den Fingerabdruck des Servers. Vergleiche ihn mit dem, was der Server selbst anzeigt, bevor du ihn bestätigst:</p>
+<div class="card"><code>ssh-keygen -lf /etc/ssh/ssh_host_ed25519_key.pub</code></div>
+<p>Stimmt er überein, bist du verbunden.</p>
+
+<footer>Pocket SSH Terminal. Kontakt: <a href="mailto:pocketssh.feedback@proton.me">pocketssh.feedback@proton.me</a></footer>
+</main>
+</body>
+</html>
